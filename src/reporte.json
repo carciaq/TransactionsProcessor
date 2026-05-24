@@ -1,0 +1,62 @@
+{
+    "ciudades_unicas": [
+        "bogota",
+        "cali",
+        "medellin"
+    ],
+    "clientes_frecuentes": [],
+    "comercio_por_id": {
+        "com-1001": "libreria central",
+        "com-1002": "tech store",
+        "com-1003": "supermercado norte",
+        "com-1004": "viajes global"
+    },
+    "detectar_duplicados": [],
+    "ids_aprobadas": [
+        "tx-001",
+        "tx-003",
+        "tx-004",
+        "tx-005"
+    ],
+    "montos_por_canal": {
+        "web": {
+            "monto": "176000.0",
+            "moneda": "COP"
+        },
+        "pos": {
+            "monto": "191258.50",
+            "moneda": "COP"
+        },
+        "mobile": {
+            "monto": "1230150.00",
+            "moneda": "COP"
+        }
+    },
+    "top_n_comercios_por_monto": [
+        [
+            "com-1004",
+            {
+                "monto": "1230150.00",
+                "moneda": "COP"
+            }
+        ],
+        [
+            "com-1001",
+            {
+                "monto": "311258.50",
+                "moneda": "COP"
+            }
+        ],
+        [
+            "com-1003",
+            {
+                "monto": "56000.0",
+                "moneda": "COP"
+            }
+        ]
+    ],
+    "total_aprobado_streaming": {
+        "monto": "1597408.50",
+        "moneda": "COP"
+    }
+}

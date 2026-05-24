@@ -1,0 +1,7 @@
+id,fecha,comercio_id,comercio_nombre,cliente_id,ciudad,monto,moneda,estado,canal
+"tx-001","2026-05-20 08:15:30","com-1001","libreria central","cli-9001","bogota",120000,"COP","aprobada","web"
+"tx-002","2026-05-20 09:40:11","com-1002","tech store","cli-9002","medellin",85.75,"USD","rechazada","app"
+"tx-003","2026-05-20 10:05:00","com-1001","libreria central","cli-9003","bogota",42.5,"EUR","aprobada","pos"
+"tx-004","2026-05-20 11:20:45","com-1003","supermercado norte","cli-9001","cali",56000,"COP","aprobada","web"
+"tx-005","2026-05-20 13:55:10","com-1004","viajes global","cli-9004","bogota",300.0,"USD","aprobada","mobile"
+"tx-006","2026-05-20 15:10:05","com-1002","tech store","cli-9002","medellin",220000,"COP","rechazada","app"
