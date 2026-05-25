@@ -24,10 +24,11 @@ def main():
     Procesador = ProcesadorTransacciones(
         parser=CSVParser(),
         analista=Analista(),
-        exportadores=[ExportadorConsola(), ExportadorJSON(args.out)] if args.modo == 'verboso' else [ExportadorJSON(args.out)],
+        exportadores=[ExportadorJSON(args.out)],
         tasas= json.load(open(args.tasas, 'r', encoding='utf-8')) 
     )
     
+    if args.modo == 'verboso': Procesador.exportadores.append(ExportadorConsola())
     Procesador.procesar(args.input)
     
 if __name__ == "__main__":
