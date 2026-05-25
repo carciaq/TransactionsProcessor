@@ -6,36 +6,34 @@ Proyecto ETL en Python para parsear transacciones, convertir montos a COP, calcu
 
 Notas:
 - El repositorio usa layout `src/`.
-- `pyproject.toml` está vacío, por lo que se recomienda correr con `PYTHONPATH=src`.
 
 ### Instalar entorno (Windows)
 
 ```powershell
 python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-python -m pip install --upgrade pip
-python -m pip install pytest
+.\.venv\Scripts\activate
+python -m pip install taskipy
+python -m pip install pytest (si quieres correr tests)
 ```
 
 ### Correr tests
 
 ```powershell
-$env:PYTHONPATH = "src"
+cd src
 python -m pytest -q
 ```
 
 ### Ejecutar ETL
 
 ```powershell
-$env:PYTHONPATH = "src"
-python -m etl --input data/transactions.csv --tasas data/tasas.json --out data/reporte.json --modo verboso
-```
-
-Si prefieres correr desde `src/`, también funciona:
-
-```powershell
 cd src
-python -m etl --input ../data/transactions.csv --tasas ../data/tasas.json --out ../data/reporte.json --modo verboso
+python -m etl --input ../data/transacciones.csv --tasas ../data/tasas.json --out ../data/reporte.json --modo ("silencioso","verboso")
+```
+o ejecutar shorcut:
+
+```bash
+cd src
+task runp
 ```
 
 ## 2) Mapa de reglas pythónicas (archivo y línea)

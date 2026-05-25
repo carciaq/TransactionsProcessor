@@ -13,16 +13,12 @@ class ExportadorJSON:
         if isinstance(valor, set):
             return sorted(valor)
         
-        # dataclasses -> dict
+        if hasattr(valor, 'monto') and hasattr(valor, 'moneda'):
+            return str(valor)
+        
         if is_dataclass(valor):
             return self._normalizar(asdict(valor))
-        # Dinero-like objects: have 'monto' and 'moneda' attributes
-        if hasattr(valor, 'monto') and hasattr(valor, 'moneda'):
-            return {
-                'monto': str(valor.monto),
-                'moneda': valor.moneda
-            }
-        # Decimal -> string to preserve precision
+        
         if isinstance(valor, Decimal):
             return str(valor)
         if isinstance(valor, dict):

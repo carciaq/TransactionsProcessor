@@ -19,44 +19,23 @@
         "tx-005"
     ],
     "montos_por_canal": {
-        "web": {
-            "monto": "176000.0",
-            "moneda": "COP"
-        },
-        "pos": {
-            "monto": "191258.50",
-            "moneda": "COP"
-        },
-        "mobile": {
-            "monto": "1230150.00",
-            "moneda": "COP"
-        }
+        "web": "176,000.00 COP",
+        "pos": "191,258.50 COP",
+        "mobile": "1,230,150.00 COP"
     },
     "top_n_comercios_por_monto": [
         [
             "com-1004",
-            {
-                "monto": "1230150.00",
-                "moneda": "COP"
-            }
+            "1,230,150.00 COP"
         ],
         [
             "com-1001",
-            {
-                "monto": "311258.50",
-                "moneda": "COP"
-            }
+            "311,258.50 COP"
         ],
         [
             "com-1003",
-            {
-                "monto": "56000.0",
-                "moneda": "COP"
-            }
+            "56,000.00 COP"
         ]
     ],
-    "total_aprobado_streaming": {
-        "monto": "1597408.50",
-        "moneda": "COP"
-    }
+    "total_aprobado_streaming": "1,597,408.50 COP"
 }

@@ -27,7 +27,7 @@ class Analista:
     def top_n_comercios_por_monto(self, txs: Iterable[Transaccion], n: int = 10) -> list[tuple[str, Dinero]]:
         montos_por_comercio = defaultdict(Dinero)
         for t in txs:
-            if t.estado == "aprobada" : montos_por_comercio[t.comercio_id] += t.valor if t.estado == "aprobada" else Dinero(0, "COP")
+            if t.estado == "aprobada" : montos_por_comercio[t.comercio_id] += t.valor 
         return sorted(montos_por_comercio.items(), key=lambda x: x[1], reverse=True)[:n]
     
     def clientes_frecuentes(self, txs: Iterable[Transaccion], umbral: int = 5) -> set[str]:
@@ -36,7 +36,7 @@ class Analista:
     def montos_por_canal(self, txs: Iterable[Transaccion]) -> dict[str, Dinero]:
         canales: dict[str, Dinero] = defaultdict(lambda: Dinero(monto=Decimal(0), moneda="COP"))
         for t in txs:
-            if t.estado == "aprobada" :canales[t.canal] = canales[t.canal] + t.valor if t.estado == "aprobada" else canales[t.canal]
+            if t.estado == "aprobada":canales[t.canal] = canales[t.canal] + t.valor
         return canales
     
     def convertir_a_cop(self, tx: Transaccion, tasas: dict[str, float]) -> Transaccion:

@@ -1,0 +1,2 @@
+[tool.taskipy.tasks]
+runp = "python -m etl --input ../data/transacciones.csv --tasas ../data/tasas.json --out ../data/reporte.json"
