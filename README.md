@@ -41,15 +41,15 @@ task runp
 Elementos obligatorios pedidos y su ubicación actual:
 
 1. List comprehension real:
-	- `src/etl/analytics/analista.py:12`
+	- `src/etl/analytics/analista.py:14`
 	- `return [t.id for t in txs if t.estado == "aprobada"]`
 
 2. Dict comprehension real:
-	- `src/etl/analytics/analista.py:18`
+	- `src/etl/analytics/analista.py:28`
 	- `return {t.comercio_id: t.comercio_nombre for t in txs if t.comercio_nombre != ''}`
 
 3. Set comprehension real:
-	- `src/etl/analytics/analista.py:15`
+	- `src/etl/analytics/analista.py:21`
 	- `return {t.ciudad for t in txs if t.ciudad != ''}`
 
 4. Generator expression real:

@@ -1,0 +1,118 @@
+{
+    "ciudades_unicas": [
+        "Armenia",
+        "Barranquilla",
+        "Bogota",
+        "Bucaramanga",
+        "Cali",
+        "Cartagena",
+        "Ibague",
+        "Medellin",
+        "Neiva",
+        "Pereira",
+        "Santa Marta",
+        "Sincelejo",
+        "Villavicencio"
+    ],
+    "clientes_frecuentes": [],
+    "comercio_por_id": {
+        "COM001": "tienda central",
+        "COM002": "supermarket plus",
+        "COM003": "electroshop",
+        "COM004": "cafe express",
+        "COM005": "farmacia vida",
+        "COM010": "tech world",
+        "COM011": "viajes global",
+        "COM012": "restaurante azul",
+        "COM014": "hotel sunset",
+        "COM015": "cinemax",
+        "COM017": "music planet",
+        "COM018": "green market",
+        "COM019": "ferreteria max",
+        "COM021": "digital store",
+        "COM022": "bike center",
+        "COM024": "beauty shop",
+        "COM025": "game zone",
+        "COM027": "fast delivery",
+        "COM028": "organic food",
+        "COM029": "cloud services",
+        "COM006": "ropa urbana"
+    },
+    "detectar_duplicados": [
+        "1"
+    ],
+    "ids_aprobadas": [
+        "1",
+        "2",
+        "4",
+        "10",
+        "12",
+        "15",
+        "18",
+        "21",
+        "1",
+        "26",
+        "27",
+        "29",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "39",
+        "40",
+        "41",
+        "42",
+        "45",
+        "48",
+        "49"
+    ],
+    "montos_por_canal": {
+        "web": "7,657,527.58 COP",
+        "movil": "1,576,089.50 COP",
+        "pos": "10,001,469,714.20 COP"
+    },
+    "top_n_comercios_por_monto": [
+        [
+            "COM027",
+            "9,999,999,999.00 COP"
+        ],
+        [
+            "COM011",
+            "3,690,450.00 COP"
+        ],
+        [
+            "COM010",
+            "2,521,912.08 COP"
+        ],
+        [
+            "COM029",
+            "1,609,446.25 COP"
+        ],
+        [
+            "COM021",
+            "800,000.00 COP"
+        ],
+        [
+            "COM018",
+            "616,715.20 COP"
+        ],
+        [
+            "COM001",
+            "500,000.00 COP"
+        ],
+        [
+            "COM002",
+            "481,808.75 COP"
+        ],
+        [
+            "COM025",
+            "168,000.00 COP"
+        ],
+        [
+            "COM012",
+            "150,000.00 COP"
+        ]
+    ],
+    "total_aprobado_streaming": "10,010,703,331.28 COP"
+}

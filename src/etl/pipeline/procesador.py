@@ -18,7 +18,6 @@ class ProcesadorTransacciones:
         self.tasas = tasas    
     
     
-    
     def procesar(self, source: str) -> dict:
         """
         1. Lee transacciones con el parser (streaming).
@@ -28,7 +27,10 @@ class ProcesadorTransacciones:
         5. Invoca a cada exportador con el reporte.
         6. Devuelve el reporte para que el caller pueda inspeccionarlo.
         """
-        transacciones_cop = [self.analista.convertir_a_cop(transaccion, self.tasas) for transaccion in self.parser.parse(source)]
+        transacciones_cop = []
+        for transaccion in self.parser.parse(source):
+            if self.analista.convertir_a_cop(transaccion, self.tasas) is not None:
+                transacciones_cop.append(self.analista.convertir_a_cop(transaccion, self.tasas))
 
         reporte: dict[str, object] = {}
         for metrica_name in dir(self.analista):
