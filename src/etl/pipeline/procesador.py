@@ -1,6 +1,9 @@
+from etl.exceptions.exceptions import DuplicateIDError
 from etl.parsers.base import Parser
 from etl.analytics.analista import Analista
 from etl.export import Exportador
+from dataclasses import asdict
+import logging
 
 
 class ProcesadorTransacciones:
@@ -16,9 +19,10 @@ class ProcesadorTransacciones:
         self.analista = analista
         self.exportadores = exportadores
         self.tasas = tasas    
+        self.procesadas = 0
     
     
-    def procesar(self, source: str) -> dict:
+    def procesar(self, source: str) -> int:
         """
         1. Lee transacciones con el parser (streaming).
         2. Convierte a COP las que no lo están.
@@ -27,23 +31,14 @@ class ProcesadorTransacciones:
         5. Invoca a cada exportador con el reporte.
         6. Devuelve el reporte para que el caller pueda inspeccionarlo.
         """
-        transacciones_cop = []
-        for transaccion in self.parser.parse(source):
-            if self.analista.convertir_a_cop(transaccion, self.tasas) is not None:
-                transacciones_cop.append(self.analista.convertir_a_cop(transaccion, self.tasas))
-
-        reporte: dict[str, object] = {}
-        for metrica_name in dir(self.analista):
-            metrica_func = getattr(self.analista, metrica_name)
-            if not callable(metrica_func) or metrica_name.startswith('_') or metrica_name == 'convertir_a_cop':
-                continue
-
-            if metrica_name == 'total_aprobado_streaming':
-                reporte[metrica_name] = metrica_func(self.parser, source, self.tasas)
-                continue
-
-            reporte[metrica_name] = metrica_func(transacciones_cop)
-
-        for exportador in self.exportadores:
-            exportador.exportar(reporte)
-        return reporte
+        ids_vistos: set[str] = set()
+        for i, transaccion in enumerate(self.parser.parse(source), start=1):
+            if transaccion.id in ids_vistos:
+                try:
+                    raise DuplicateIDError(row_number=i, row_data=asdict(transaccion), source=source)
+                except DuplicateIDError as e:
+                    logging.warning("ID duplicado encontrado", exc_info=True)
+            else: self.procesadas += 1
+            ids_vistos.add(transaccion.id)
+        
+        return 0

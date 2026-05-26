@@ -1,0 +1,18 @@
+id,fecha,comercio_id,comercio_nombre,cliente_id,ciudad,monto,moneda,estado,canal
+34,2026-05-18 17:29:58,COM018,Green Market,CLI1018,Neiva,75.2,USD,aprobada,pos
+35,2026-05-21 08:08:08,COM021,Digital Store,CLI1021,Villavicencio,340000,COP,aprobada,pos
+36,2026-05-21 08:09:01,COM021,Digital Store,CLI1021,Villavicencio,120000,COP,aprobada,web
+37,2026-05-21 08:10:10,COM021,Digital Store,CLI1021,Villavicencio,98000,COP,rechazada,movil
+38,2026-05-11 18:40:33,COM011,Viajes Global,CLI1011,Santa Marta,0,USD,rechazada,movil
+39,2026-05-11 18:41:00,COM011,Viajes Global,CLI1011,Santa Marta,450,USD,aprobada,web
+40,2026-05-11 18:42:12,COM011,Viajes Global,CLI1011,Santa Marta,450,USD,aprobada,web
+102,2026-05-25 16:45:01,COM025,Game Zone,CLI1025,Bogota,56000,COP,aprobada,web
+42,2026-05-25 16:45:01,COM025,Game Zone,CLI1025,Bogota,56000,COP,aprobada,web
+43,2026-05-25 16:50:33,COM025,Game Zone,CLI1025,Bogota,12000,COP,reversada,movil
+103,2026-05-06 11:11:11,COM006,Ropa Urbana,CLI1006,Bucaramanga,-50000,COP,aprobada,pos
+45,2026-05-06 11:15:00,COM006,Ropa Urbana,CLI1006,Bucaramanga,75000,COP,aprobada,web
+100,2026-05-14 06:05:17,COM014,Hotel Sunset,CLI1014,Medellin,450.99,EUR,reversada,movil
+47,2026-05-14 06:05:17,COM014,Hotel Sunset,CLI1014,Medellin,450.99,EUR,reversada,movil
+105,2026-05-29 22:07:13,COM029,Cloud Services,CLI1029,Cartagena,130.75,USD,aprobada,movil
+49,2026-05-29 22:10:10,COM029,Cloud Services,CLI1029,Cartagena,131.00,USD,aprobada,web
+20,invalid_timestamp,COM002,SuperMarket Plus,CLI1002,Medellin,58.75,USD,aprobada,movil

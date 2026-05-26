@@ -1,0 +1,69 @@
+2026-05-25 22:29:07,063 - [INFO] - Archivos a procesar: ['../data\\transacciones.csv', '../data\\transacciones2.csv', '../data\\transacciones3.csv', '../data/corrupto.csv']
+2026-05-25 22:29:07,063 - [INFO] - Procesando: ../data\transacciones.csv
+2026-05-25 22:29:07,066 - [WARNING] - Fila 3 del archivo ../data\transacciones.csv saltada 
+ data: {'id': 'tx-003', 'fecha': '2026-05-20 10:05:00', 'comercio_id': 'com-1001', 'comercio_nombre': 'libreria central', 'cliente_id': 'cli-9003', 'ciudad': 'bogota', 'monto': 'oo', 'moneda': 'EUR', 'estado': 'aprobada', 'canal': 'pos'} 
+ - Valor de monto no es un numero valido
+2026-05-25 22:29:07,066 - [INFO] - Archivo ../data\transacciones.csv procesado exitosamente. Total filas procesadas: 5
+2026-05-25 22:29:07,066 - [INFO] - Procesando: ../data\transacciones2.csv
+2026-05-25 22:29:07,066 - [WARNING] - ID duplicado encontrado
+Traceback (most recent call last):
+  File "C:\Users\Cristian\OneDrive - Universidad Nacional de Colombia\Escritorio\Semillero\python\ETL\src\etl\pipeline\procesador.py", line 38, in procesar
+    raise DuplicateIDError(row_number=i, row_data=asdict(transaccion), source=source)
+etl.exceptions.exceptions.DuplicateIDError: ID duplicado encontrado en la fila 4 del archivo ../data\transacciones2.csv 
+ data: {'id': '1', 'fecha': datetime.datetime(2026, 5, 4, 9, 33, 47), 'comercio_id': 'COM004', 'comercio_nombre': 'cafe express', 'cliente_id': 'CLI1004', 'ciudad': 'Barranquilla', 'valor': {'monto': Decimal('45000'), 'moneda': 'COP'}, 'estado': 'aprobada', 'canal': 'web'} 
+
+2026-05-25 22:29:07,067 - [WARNING] - ID duplicado encontrado
+Traceback (most recent call last):
+  File "C:\Users\Cristian\OneDrive - Universidad Nacional de Colombia\Escritorio\Semillero\python\ETL\src\etl\pipeline\procesador.py", line 38, in procesar
+    raise DuplicateIDError(row_number=i, row_data=asdict(transaccion), source=source)
+etl.exceptions.exceptions.DuplicateIDError: ID duplicado encontrado en la fila 5 del archivo ../data\transacciones2.csv 
+ data: {'id': '1', 'fecha': datetime.datetime(2026, 5, 5, 16, 2, 55), 'comercio_id': 'COM005', 'comercio_nombre': 'farmacia vida', 'cliente_id': 'CLI1005', 'ciudad': 'Cartagena', 'valor': {'monto': Decimal('89.99'), 'moneda': 'USD'}, 'estado': 'reversada', 'canal': 'movil'} 
+
+2026-05-25 22:29:07,068 - [WARNING] - Fila 6 del archivo ../data\transacciones2.csv saltada 
+ data: {'id': '6', 'fecha': '2026-05-06 11:11:11', 'comercio_id': 'COM006', 'comercio_nombre': 'Ropa Urbana', 'cliente_id': 'CLI1006', 'ciudad': 'Bucaramanga', 'monto': '-50000', 'moneda': 'COP', 'estado': 'aprobada', 'canal': 'pos'} 
+ - Monto no puede ser negativo
+2026-05-25 22:29:07,068 - [WARNING] - Fila 8 del archivo ../data\transacciones2.csv saltada 
+ data: {'id': '8', 'fecha': '2mi', 'comercio_id': 'COM008', 'comercio_nombre': 'Libreria Norte', 'cliente_id': 'CLI1008', 'ciudad': 'Manizales', 'monto': '12000', 'moneda': 'COP', 'estado': 'aprobada', 'canal': 'movil'} 
+ - time data '2mi' does not match format '%Y-%m-%d %H:%M:%S'
+2026-05-25 22:29:07,068 - [WARNING] - Fila 9 del archivo ../data\transacciones2.csv saltada 
+ data: {'id': '9', 'fecha': 'not_a_date', 'comercio_id': 'COM009', 'comercio_nombre': 'Panaderia Sol', 'cliente_id': 'CLI1009', 'ciudad': 'Cucuta', 'monto': '7800', 'moneda': 'COP', 'estado': 'aprobada', 'canal': 'pos'} 
+ - time data 'not_a_date' does not match format '%Y-%m-%d %H:%M:%S'
+2026-05-25 22:29:07,068 - [WARNING] - Fila 16 del archivo ../data\transacciones2.csv saltada 
+ data: {'id': '16', 'fecha': '2026-05-16 15:55:00', 'comercio_id': 'COM016', 'comercio_nombre': 'Pet Store', 'cliente_id': 'CLI1016', 'ciudad': 'Pasto', 'monto': 'not_number', 'moneda': 'USD', 'estado': 'aprobada', 'canal': 'web'} 
+ - Valor de monto no es un numero valido
+2026-05-25 22:29:07,068 - [WARNING] - Fila 20 del archivo ../data\transacciones2.csv saltada 
+ data: {'id': '20', 'fecha': '2026-05-20 23:59:59', 'comercio_id': 'COM020', 'comercio_nombre': 'Joyeria Elite', 'cliente_id': 'CLI1020', 'ciudad': 'Monteria', 'monto': '-12.5', 'moneda': 'EUR', 'estado': 'aprobada', 'canal': 'movil'} 
+ - Monto no puede ser negativo
+2026-05-25 22:29:07,068 - [WARNING] - Fila 23 del archivo ../data\transacciones2.csv saltada 
+ data: {'id': '23', 'fecha': '2026-02-30', 'comercio_id': 'COM023', 'comercio_nombre': 'Market Place', 'cliente_id': 'CLI1023', 'ciudad': 'Tunja', 'monto': '45000', 'moneda': 'COP', 'estado': 'aprobada', 'canal': 'movil'} 
+ - time data '2026-02-30' does not match format '%Y-%m-%d %H:%M:%S'
+2026-05-25 22:29:07,069 - [WARNING] - Fila 30 del archivo ../data\transacciones2.csv saltada 
+ data: {'id': '30', 'fecha': '2026-05-30 00:00:01', 'comercio_id': 'COM030', 'comercio_nombre': 'Home Decor', 'cliente_id': 'CLI1030', 'ciudad': 'Pereira', 'monto': '', 'moneda': 'COP', 'estado': 'aprobada', 'canal': 'pos'} 
+ - Valor de monto no es un numero valido
+2026-05-25 22:29:07,069 - [WARNING] - Fila 31 del archivo ../data\transacciones2.csv saltada 
+ data: {'id': '31', 'fecha': '2026-05-30 00:00:01', 'comercio_id': 'COM030', 'comercio_nombre': 'Home Decor', 'cliente_id': 'CLI1030', 'ciudad': 'Pereira', 'monto': '', 'moneda': 'COP', 'estado': 'aprobada', 'canal': 'pos'} 
+ - Valor de monto no es un numero valido
+2026-05-25 22:29:07,069 - [INFO] - Archivo ../data\transacciones2.csv procesado exitosamente. Total filas procesadas: 23
+2026-05-25 22:29:07,069 - [INFO] - Procesando: ../data\transacciones3.csv
+2026-05-25 22:29:07,070 - [WARNING] - Fila 11 del archivo ../data\transacciones3.csv saltada 
+ data: {'id': '103', 'fecha': '2026-05-06 11:11:11', 'comercio_id': 'COM006', 'comercio_nombre': 'Ropa Urbana', 'cliente_id': 'CLI1006', 'ciudad': 'Bucaramanga', 'monto': '-50000', 'moneda': 'COP', 'estado': 'aprobada', 'canal': 'pos'} 
+ - Monto no puede ser negativo
+2026-05-25 22:29:07,070 - [WARNING] - Fila 17 del archivo ../data\transacciones3.csv saltada 
+ data: {'id': '20', 'fecha': 'invalid_timestamp', 'comercio_id': 'COM002', 'comercio_nombre': 'SuperMarket Plus', 'cliente_id': 'CLI1002', 'ciudad': 'Medellin', 'monto': '58.75', 'moneda': 'USD', 'estado': 'aprobada', 'canal': 'movil'} 
+ - time data 'invalid_timestamp' does not match format '%Y-%m-%d %H:%M:%S'
+2026-05-25 22:29:07,071 - [INFO] - Archivo ../data\transacciones3.csv procesado exitosamente. Total filas procesadas: 15
+2026-05-25 22:29:07,071 - [INFO] - Procesando: ../data/corrupto.csv
+2026-05-25 22:29:07,072 - [ERROR] - Archivo no encontrado: ../data/corrupto.csv. Error: [Errno 2] No such file or directory: '../data/corrupto.csv'
+2026-05-25 22:29:07,072 - [ERROR] - [Errno 2] No such file or directory: '../data/corrupto.csv'
+2026-05-25 22:29:07,072 - [INFO] - 
+=================== Reporte Final ===================
+Total archivos procesados: 3/4
+Filas Procesadas 43
+Filas con errores: 13
+Tasa de exito: 76.79%
+
+Errores por tipo:
+RowError: 7
+DuplicateIDError: 2
+FormatError: 4
+

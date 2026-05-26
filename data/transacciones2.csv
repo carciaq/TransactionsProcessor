@@ -2,11 +2,11 @@ id,fecha,comercio_id,comercio_nombre,cliente_id,ciudad,monto,moneda,estado,canal
 1,2026-05-01 08:15:22,COM001,Tienda Central,CLI1001,Bogota,250000,COP,aprobada,web
 2,2026-05-02 10:45:11,COM002,SuperMarket Plus,CLI1002,Medellin,58.75,USD,aprobada,movil
 3,2026-05-03 14:20:05,COM003,ElectroShop,CLI1003,Cali,120.5,EUR,rechazada,pos
-4,2026-05-04 09:33:47,COM004,Cafe Express,CLI1004,Barranquilla,45000,COP,aprobada,web
-5,2026-05-05 16:02:55,COM005,Farmacia Vida,CLI1005,Cartagena,89.99,USD,reversada,movil
+1,2026-05-04 09:33:47,COM004,Cafe Express,CLI1004,Barranquilla,45000,COP,aprobada,web
+1,2026-05-05 16:02:55,COM005,Farmacia Vida,CLI1005,Cartagena,89.99,USD,reversada,movil
 6,2026-05-06 11:11:11,COM006,Ropa Urbana,CLI1006,Bucaramanga,-50000,COP,aprobada,pos
 7,2026-05-07 12:45:00,COM007,,CLI1007,Pereira,34000,COP,rechazada,web
-8,2026-13-01,COM008,Libreria Norte,CLI1008,Manizales,12000,COP,aprobada,movil
+8,2mi,COM008,Libreria Norte,CLI1008,Manizales,12000,COP,aprobada,movil
 9,not_a_date,COM009,Panaderia Sol,CLI1009,Cucuta,7800,COP,aprobada,pos
 10,2026-05-10 07:50:10,COM010,Tech World,CLI1010,,560.4,EUR,aprobada,web
 11,2026-05-11 18:40:33,COM011,Viajes Global,CLI1011,Santa Marta,0,USD,rechazada,movil
@@ -21,9 +21,9 @@ id,fecha,comercio_id,comercio_nombre,cliente_id,ciudad,monto,moneda,estado,canal
 20,2026-05-20 23:59:59,COM020,Joyeria Elite,CLI1020,Monteria,-12.5,EUR,aprobada,movil
 21,2026-05-21 08:08:08,COM021,Digital Store,CLI1021,Villavicencio,340000,COP,aprobada,pos
 22,2026-05-22 19:30:15,COM022,Bike Center,CLI1022,,89000,COP,rechazada,web
-1,2026-02-30,COM023,Market Place,CLI1023,Tunja,45000,COP,aprobada,movil
-1,2026-05-24 14:14:14,COM024,Beauty Shop,CLI1024,Sincelejo,125.8,USD,reversada,pos
-1,2026-05-25 16:45:01,COM025,Game Zone,CLI1025,Bogota,56000,COP,aprobada,web
+23,2026-02-30,COM023,Market Place,CLI1023,Tunja,45000,COP,aprobada,movil
+24,2026-05-24 14:14:14,COM024,Beauty Shop,CLI1024,Sincelejo,125.8,USD,reversada,pos
+25,2026-05-25 16:45:01,COM025,Game Zone,CLI1025,Bogota,56000,COP,aprobada,web
 26,2026-05-26 12:00:00,COM026,,CLI1026,Medellin,22000,COP,aprobada,movil
 27,2026-05-27 05:25:45,COM027,Fast Delivery,CLI1027,Cali,9999999999,COP,aprobada,pos
 28,2026-05-28 18:18:18,COM028,Organic Food,CLI1028,Barranquilla,42.42,EUR,rechazada,web
@@ -32,20 +32,3 @@ id,fecha,comercio_id,comercio_nombre,cliente_id,ciudad,monto,moneda,estado,canal
 31,2026-05-30 00:00:01,COM030,Home Decor,CLI1030,Pereira,,COP,aprobada,pos
 32,2026-05-01 08:15:22,COM001,Tienda Central,CLI1001,Bogota,250000,COP,aprobada,web
 33,2026-05-02 10:45:11,COM002,SuperMarket Plus,CLI1002,Medellin,58.75,USD,aprobada,movil
-34,2026-05-18 17:29:58,COM018,Green Market,CLI1018,Neiva,75.2,USD,aprobada,pos
-35,2026-05-21 08:08:08,COM021,Digital Store,CLI1021,Villavicencio,340000,COP,aprobada,pos
-36,2026-05-21 08:09:01,COM021,Digital Store,CLI1021,Villavicencio,120000,COP,aprobada,web
-37,2026-05-21 08:10:10,COM021,Digital Store,CLI1021,Villavicencio,98000,COP,rechazada,movil
-38,2026-05-11 18:40:33,COM011,Viajes Global,CLI1011,Santa Marta,0,USD,rechazada,movil
-39,2026-05-11 18:41:00,COM011,Viajes Global,CLI1011,Santa Marta,450,USD,aprobada,web
-40,2026-05-11 18:42:12,COM011,Viajes Global,CLI1011,Santa Marta,450,USD,aprobada,web
-41,2026-05-25 16:45:01,COM025,Game Zone,CLI1025,Bogota,56000,COP,aprobada,web
-42,2026-05-25 16:45:01,COM025,Game Zone,CLI1025,Bogota,56000,COP,aprobada,web
-43,2026-05-25 16:50:33,COM025,Game Zone,CLI1025,Bogota,12000,COP,reversada,movil
-44,2026-05-06 11:11:11,COM006,Ropa Urbana,CLI1006,Bucaramanga,-50000,COP,aprobada,pos
-45,2026-05-06 11:15:00,COM006,Ropa Urbana,CLI1006,Bucaramanga,75000,COP,aprobada,web
-46,2026-05-14 06:05:17,COM014,Hotel Sunset,CLI1014,Medellin,450.99,EUR,reversada,movil
-47,2026-05-14 06:05:17,COM014,Hotel Sunset,CLI1014,Medellin,450.99,EUR,reversada,movil
-48,2026-05-29 22:07:13,COM029,Cloud Services,CLI1029,Cartagena,130.75,USD,aprobada,movil
-49,2026-05-29 22:10:10,COM029,Cloud Services,CLI1029,Cartagena,131.00,USD,aprobada,web
-50,invalid_timestamp,COM002,SuperMarket Plus,CLI1002,Medellin,58.75,USD,aprobada,movil
